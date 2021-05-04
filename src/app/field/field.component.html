@@ -1,0 +1,10 @@
+<table class="table table-borderless">
+  <tr *ngFor="let row of field, let i = index">
+    <td *ngFor="let cell of row, let j = index" class="cell"
+        (click)="fieldClick(i, j)"
+        [ngClass]="{
+          'way': cell === FieldCellStatusEnum.WAY_CELL,
+          'first-gun': cell === FieldCellStatusEnum.FIRST_GUN
+        }"></td>
+  </tr>
+</table>
