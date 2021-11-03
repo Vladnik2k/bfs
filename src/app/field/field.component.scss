@@ -1,6 +1,6 @@
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 15px;
+  height: 15px;
   border: 1px solid black;
   background: #e0e0e0;
 }
@@ -14,4 +14,8 @@
 .cell.way:hover {
   cursor: pointer;
   background: darkgrey;
+}
+
+.correct-way {
+  background: darkolivegreen;
 }

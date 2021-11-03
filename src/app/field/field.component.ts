@@ -10,6 +10,7 @@ import {CoordinatesModel} from '../model/coordinates.model';
 export class FieldComponent implements OnInit {
 
   @Input() field: Array<Array<FieldCellStatusEnum>> = [];
+  @Input() result: Array<CoordinatesModel> = [];
   FieldCellStatusEnum = FieldCellStatusEnum;
   @Output() cellClick = new EventEmitter<CoordinatesModel>();
 
@@ -20,6 +21,10 @@ export class FieldComponent implements OnInit {
 
   fieldClick(i: number, j: number): void {
     this.cellClick.emit({i, j});
+  }
+
+  isInResult(i: number, j: number): boolean {
+    return !!this.result.find(el => el.i === i && el.j === j);
   }
 
 }

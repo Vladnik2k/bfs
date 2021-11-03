@@ -4,7 +4,8 @@
         (click)="fieldClick(i, j)"
         [ngClass]="{
           'way': cell === FieldCellStatusEnum.WAY_CELL,
-          'first-gun': cell === FieldCellStatusEnum.FIRST_GUN
+          'first-gun': cell === FieldCellStatusEnum.FIRST_GUN,
+          'correct-way': isInResult(i, j)
         }"></td>
   </tr>
 </table>
